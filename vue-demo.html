@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue入门</title>
+</head>
+<body>
+        
+    <div id="app">
+           <p> {{message}}</p>
+        <input type="text" v-model='name'><span v-show='name'>你的名字:{{name}}</span><br>
+        <input type="text" v-model='age'><span v-show='age'>你的年龄: {{age}}</span><br>
+        <input type="text" v-model='sex'><span v-show='sex'>你的性别: {{sex}}</span><br>
+        <ul>
+            <li v-for='food in foodList'>{{food}}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script></script>
+</body>
+<script>
+    var app=new Vue({
+        el:'#app',
+        data:{
+            name:'肖旺',
+            age:'18',
+            sex:'男',
+            foodList:['葱','姜 ','蒜'],
+            message:'hello vue!'
+           
+    
+        }
+    });
+    
+</script>
+</html>
