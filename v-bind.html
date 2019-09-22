@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-bind指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a :href="url">
+            <img :class='klans' :src="img" alt="">
+        </a>
+        <button v-on="{mouseenter:onEnter,mouseleave:onOut}" v-on:click='onClick'>点击</button>
+    </div>
+</body>
+<script>
+var app = new Vue({
+        el:'#app',
+        data:{
+            url:'https://baidu.com',
+            img:'https://www.baidu.com/img/bd_logo1.png',
+            isOn:true,
+            isActive:true,
+            klans:'imgs1'
+        }
+})
+</script>
+</html>

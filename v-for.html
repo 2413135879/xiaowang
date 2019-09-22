@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-FOR指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for='food in foodList'>
+              {{food.name}} ￥：{{food.discount ? food.price*food.discount : food.price}} 折扣率{{food.discount}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+   var app = new Vue({
+       el:'#app',
+       data:{
+           foodList:[
+               {name:'橙汁',price:'5',discount:'0.9'},
+               {name:'辣条',price:'4',discount:'0.8'},
+               {name:'瘦肉',price:'18',discount:'1'},
+           ]
+       }
+   })
+</script>
+</html>
