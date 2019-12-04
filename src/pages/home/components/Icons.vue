@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       swiperOption: {
-        // autoplay自动播放除了有true和false值以外，还可以直接指定轮播的时间间隔 例如autoplay: 5000
+      
         autoplay: false
       },
       iconList: [{
@@ -63,12 +63,12 @@ export default {
       }]
     }
   },
-  // 通过computed来计算图标区的分页
+ 
   computed: {
     pages () {
       const pages = []
       this.iconList.forEach((item, index) => {
-        //index是图标数组的索引，利用索引除以8来计算是否分页
+       
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -87,7 +87,7 @@ export default {
     height: 0
     padding-bottom: 50%
     background: #eee
-    //icons 层样式
+   
     .icon
       position: relative
       overflow: hidden
