@@ -9,7 +9,7 @@
 <script>
 import HomeHeader from './components/header';
 import HomeSwiper from './components/Swiper';
-import HomeIcons from './components/lcons'
+import HomeIcons from './components/Icons';
 
 export default {
     name : 'Home',
